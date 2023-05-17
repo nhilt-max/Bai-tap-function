@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+
+    <script>
+//Kiểm tra chẳn lẽ
+
+const number = prompt('Enter a number');
+
+function checkNumber(number) {
+  if (number === "") {
+    alert('Please enter a number');
+  } else if (!isNaN(number)) {
+    if (number % 2 == 0) {
+      alert('This is an even number');
+    } else {
+      alert('This is an odd number');
+    }
+  } else {
+    alert('Please enter a number');
+  }
+}
+
+checkNumber(number);
+//Kiểm tra số nguyên tố 
+
+function isPrime(number) {
+    if(number < 2) {
+        return false;
+    }
+    for (let i = 2; i < Math.sqrt(number); i++){
+        if(number % i == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+if(isPrime(number)) {
+    alert('Prime number')
+}else{
+    alert('This is not a prime number')
+}
+    </script>
+    
+</body>
+</html>
